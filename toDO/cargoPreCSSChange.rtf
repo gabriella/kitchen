@@ -1,0 +1,772 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf350
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red173\green173\blue173;\red83\green83\blue83;\red38\green38\blue38;
+\red7\green117\blue239;\red199\green52\blue61;\red102\green149\blue0;\red251\green0\blue0;}
+\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl320\ql\qnatural
+
+\f0\fs22 \cf2 /* Global Hegel styles\cf3 \
+\cf2 ***********************************************************************************************************/\cf3 \
+\
+\'a0 \'a0\'a0\cf4 body\cf3 , \cf4 html \cf3 \{ \
+\'a0 \'a0 \'a0 \'a0\'a0\cf4 margin\cf3 : \cf5 0px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0\'a0\cf4 padding\cf3 : \cf5 0px\cf3 ;\
+\'a0 \'a0\'a0\}\
+\'a0 \'a0\'a0\
+\'a0 \'a0\'a0\cf4 body \cf3 \{\
+\'a0 \'a0 \'a0 \'a0\'a0\cf4 background\cf3 : \cf6 #ffffff\cf3 ;\
+\'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #000000\cf3 ;\
+\'a0 \'a0 \'a0 \'a0\'a0\cf4 font-family\cf3 : \cf7 Arial\cf3 , \cf7 Helvetica\cf3 , \cf7 serif\cf3 ;\
+\'a0 \'a0 \'a0 \'a0\'a0\cf4 font-size\cf3 : \cf5 14px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0\'a0\cf4 line-height\cf3 : \cf5 1.5\cf3 ;\
+\'a0 \'a0 \'a0 \'a0\'a0\cf4 padding-top\cf3 : \cf5 30px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0\'a0\cf4 visibility\cf3 : \cf7 hidden\cf3 ;\
+\'a0 \'a0\'a0\}\
+\
+\
+\
+\
+\
+\'a0 \'a0\'a0\cf2 /* Header / Navigation\cf3 \
+\'a0 \'a0\'a0\cf2 *******************************************************************************************************/\cf3 \
+\'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0\'a0.\cf4 header_img \cf3 \{\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf2 /* To fix in place change to "position:fixed;" */\cf3 \
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 padding\cf3 : \cf5 30px 0 25px 0\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 text-align\cf3 : \cf7 center\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 z-index\cf3 : \cf5 99\cf3 ;\
+\'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 header_img img \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 display\cf3 : \cf7 inline-block\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0\'a0.\cf4 nav_container \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 text-align\cf3 : \cf7 center\cf3 ;\
+\'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0\'a0.\cf4 nav_container div \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 display\cf3 : \cf7 inline-block\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 padding\cf3 : \cf5 0 10px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0\'a0\cf4 #nav_loadspin \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 display\cf3 : \cf7 none\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 position\cf3 : \cf7 fixed\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 top\cf3 : \cf5 8px\cf3 ; \cf4 left\cf3 : \cf5 8px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 z-index\cf3 : \cf5 100\cf3 ;\
+\'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0\'a0.\cf4 nav_container br \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 display\cf3 : \cf7 none\cf3 ;\
+\'a0 \'a0 \'a0 \'a0\'a0\}\
+\
+\
+\
+\
+\
+\'a0 \'a0 \'a0 \'a0\'a0\cf2 /* Navigation > Links\cf3 \
+\'a0 \'a0 \'a0 \'a0\'a0\cf2 ***************************************************************************************************/\cf3 \
+\'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 nav_container a \cf3 \{\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\cf2 /* Applied to each navigation link */\cf3 \
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-size\cf3 : \cf5 14px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 text-decoration\cf3 : \cf7 none\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 project_link a \cf3 \{ \cf4 color\cf3 : \cf6 #666666\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 project_link a\cf3 :\cf4 hover \cf3 \{ \cf4 background\cf3 : \cf6 #ffff00\cf3 ; \cf4 color\cf3 : \cf6 #000000\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 project_link a\cf3 :\cf4 active \cf3 \{ \cf4 background\cf3 : \cf6 #000000\cf3 ; \cf4 color\cf3 : \cf6 #ffffff\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 page_link a \cf3 \{ \cf4 color\cf3 : \cf6 #000000\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 page_link a\cf3 :\cf4 hover \cf3 \{ \cf4 color\cf3 : \cf6 #000000\cf3 ; \cf4 text-decoration\cf3 : \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 page_link a\cf3 :\cf4 active \cf3 \{ \cf4 color\cf3 : \cf6 #000000\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 link_link a \cf3 \{ \cf4 color\cf3 : \cf6 #000000\cf3 ; \cf4 text-decoration\cf3 :\'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 link_link a\cf3 :\cf4 hover \cf3 \{ \cf4 color\cf3 : \cf6 #222222\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 link_link a\cf3 :\cf4 active \cf3 \{ \cf4 color\cf3 : \cf6 #666666\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 nav_active a \cf3 \{ \cf4 color\cf3 : \cf6 #000000\cf3 ; \cf4 font-weight\cf3 : \cf7 bold\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 nav_active a\cf3 :\cf4 hover \cf3 \{ \cf4 color\cf3 : \cf6 #000000\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 nav_active a\cf3 :\cf4 active\'a0\'a0\cf3 \{ \cf4 color\cf3 : \cf6 #000000\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 nav_follow \cf3 \{ \cf4 color\cf3 : \cf6 #999999\cf3 ; \cf4 font-size\cf3 : \cf5 11px\cf3 ; \cf4 z-index\cf3 : \cf5 11\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 nav_follow a \cf3 \{ \cf4 color\cf3 : \cf6 #222222\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 nav_follow a\cf3 :\cf4 hover \cf3 \{ \cf4 background\cf3 : \cf6 #ffff00\cf3 ; \cf4 color\cf3 : \cf6 #222222\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 nav_follow a\cf3 :\cf4 active \cf3 \{ \cf4 background\cf3 : \cf6 #000000\cf3 ; \cf4 color\cf3 : \cf6 #ffffff\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 nav_container \cf3 .\cf4 view_tag_info \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #999999\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 display\cf3 : \cf7 block\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 margin-top\cf3 : \cf5 1em\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 view_tag_info a \cf3 \{ \cf4 color\cf3 : \cf6 #999999\cf3 ; \cf4 text-decoration\cf3 : \cf7 underline\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 view_tag_info a\cf3 :\cf4 hover \cf3 \{ \cf4 color\cf3 : \cf6 #333333\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 view_tag_info a\cf3 :\cf4 active \cf3 \{ \cf4 color\cf3 : \cf6 #999999\cf3 ; \}\
+\'a0 \'a0\'a0\
+\'a0 \'a0\'a0\
+\'a0 \'a0\'a0\
+\'a0 \'a0\'a0\
+\'a0 \'a0\'a0\
+\'a0 \'a0\'a0\cf2 /* Content\cf3 \
+\'a0 \'a0\'a0\cf2 *******************************************************************************************************/\cf3 \
+\'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0\'a0\cf4 #content_container \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 margin\cf3 : \cf5 50px \cf7 auto \cf5 0\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 position\cf3 : \cf7 relative\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 z-index\cf3 : \cf5 10\cf3 ;\
+\'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0\'a0\
+\'a0 \'a0\'a0\
+\'a0 \'a0\'a0\
+\'a0 \'a0\'a0\
+\'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf2 /* Content > Project content\cf3 \
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf2 ***********************************************************************************************/\cf3 \
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 #maincontainer \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 display\cf3 : \cf7 none\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 margin\cf3 : \cf5 0 2px 2px 0\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 -webkit-border-radius\cf3 : \cf5 2px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 -moz-border-radius\cf3 : \cf5 2px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 border-radius\cf3 : \cf5 2px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 bodycopy a \cf3 \{ \cf4 color\cf3 : \cf6 #000000\cf3 ; \cf4 text-decoration\cf3 : \cf7 underline\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 bodycopy a\cf3 :\cf4 hover \cf3 \{ \cf4 background\cf3 : \cf6 #ffff00\cf3 ; \cf4 color\cf3 : \cf6 #000000\cf3 ; \cf4 text-decoration\cf3 : \cf7 none\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 bodycopy a\cf3 :\cf4 active \cf3 \{ \cf4 background\cf3 : \cf6 #000000\cf3 ; \cf4 color\cf3 : \cf6 #ffffff\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0.\cf4 entry \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\cf4 padding\cf3 : \cf5 0px 30px 30px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 project_content \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 margin\cf3 : \cf5 0 \cf7 auto\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-size\cf3 : \cf5 16px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 text-align\cf3 : \cf7 left\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 width\cf3 : \cf5 670px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 project_title \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #000000\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-size\cf3 : \cf5 24px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 margin\cf3 : \cf5 0 \cf7 auto\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 padding\cf3 : \cf5 0 0 30px 0\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 text-align\cf3 : \cf7 center\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 width\cf3 : \cf5 670px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf2 /* Project navigation\cf3 \
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf2 *******************************************************************************************/\cf3 \
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 project_header \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-family\cf3 : \cf6 'Lucida Grande'\cf3 , \cf6 'Lucida Sans Unicode'\cf3 , \cf7 Arial\cf3 , \cf7 sans-serif\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 text-align\cf3 : \cf7 center\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 text-transform\cf3 : \cf7 capitalize\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 project_header div \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 display\cf3 : \cf7 inline-block\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 project_header a \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #bbbbbb\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-size\cf3 : \cf5 12px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 height\cf3 : \cf5 30px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 line-height\cf3 : \cf5 30px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 padding\cf3 : \cf5 0 10px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 text-decoration\cf3 : \cf7 none\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 project_header a\cf3 :\cf4 hover \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 background\cf3 : \cf7 none\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #000000\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 text-decoration\cf3 : \cf7 underline\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 project_header a\cf3 :\cf4 active \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #666666\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 project_header \cf3 .\cf4 last a \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 border-right\cf3 : \cf5 1px \cf7 solid \cf6 #dddddd\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 project_divider \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 display\cf3 : \cf7 none\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf2 /* Styling of default typographic headers and elements */\cf3 \
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 h1 \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-size\cf3 : \cf5 22px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 line-height\cf3 : \cf5 165%\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 h2 \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-size\cf3 : \cf5 16px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 line-height\cf3 : \cf5 165%\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 h3 \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-size\cf3 : \cf5 14px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 line-height\cf3 : \cf5 150%\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 blockquote \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #666666\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 margin\cf3 : \cf5 0\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 project_content img \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 float\cf3 : \cf7 none \cf8 !important\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 margin\cf3 : \cf5 0 0 15px 0\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\
+\
+\
+\
+\
+\'a0 \'a0 \'a0 \'a0\'a0\cf2 /* Project content > Slideshows\cf3 \
+\'a0 \'a0 \'a0 \'a0\'a0\cf2 ***************************************************************************************************/\cf3 \
+\'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 slideshow_wrapper \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 clear\cf3 : \cf7 both\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 margin\cf3 : \cf5 0 \cf7 auto \cf5 10px \cf7 auto\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 slideshow_wrapper a\cf3 , .\cf4 slideshow_wrapper a\cf3 :\cf4 hover\cf3 , .\cf4 slideshow_wrapper a\cf3 :\cf4 active \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 background\cf3 : \cf7 none \cf8 !important\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 slideshow_nav \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 clear\cf3 : \cf7 both\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #999999\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-size\cf3 : \cf5 11px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 padding-bottom\cf3 : \cf5 10px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 slideshow_nav a \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #666666\cf3 ;\'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 text-decoration\cf3 : \cf7 none\cf3 ;\'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 slideshow_nav a\cf3 :\cf4 hover \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 background\cf3 : \cf7 none \cf8 !important\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #999999\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 text-decoration\cf3 : \cf7 none\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 slideshow_nav a\cf3 :\cf4 active \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #ff3300\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 slideshow_count \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #999999\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-size\cf3 : \cf5 11px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 ul\cf3 .\cf4 slideshow_thumbs \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 margin\cf3 : \cf5 0 \cf7 auto\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 padding\cf3 : \cf5 0\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 slideshow_thumb \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 display\cf3 : \cf7 inline-block\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 list-style\cf3 : \cf7 none\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 margin\cf3 : \cf7 -3px \cf5 7px 7px \cf7 -3px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 slideshow_thumb a \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 background\cf3 : \cf7 none \cf8 !important\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 border\cf3 : \cf5 1px \cf7 solid transparent\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 display\cf3 : \cf7 block\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 padding\cf3 : \cf5 2px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 slideshow_thumb a\cf3 :\cf4 hover \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 background\cf3 : \cf7 none \cf8 !important\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 border\cf3 : \cf5 1px \cf7 solid \cf6 #ccc\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 a\cf3 .\cf4 activeSlide \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 background\cf3 : \cf7 none\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 border\cf3 : \cf5 1px \cf7 solid \cf6 #ccc\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 slideshow_thumb a\cf3 :\cf4 active\cf3 , \cf4 a\cf3 .\cf4 activeSlide\cf3 :\cf4 active \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 background\cf3 : \cf7 none \cf8 !important\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 border\cf3 : \cf5 1px \cf7 solid \cf6 #666\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 slideshow_thumb img \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 border\cf3 : \cf5 0\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 display\cf3 : \cf7 block\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 margin\cf3 : \cf5 0\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 height\cf3 : \cf5 60px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 slideshow_caption \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 clear\cf3 : \cf7 both\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 display\cf3 : \cf7 block\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-size\cf3 : \cf5 11px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 padding\cf3 : \cf5 5px 0 5px 0\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 slideshow_caption \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 clear\cf3 : \cf7 both\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 display\cf3 : \cf7 block\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-size\cf3 : \cf5 11px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 padding\cf3 : \cf5 5px 0 5px 0\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf2 /* Project content > Project footer\cf3 \
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf2 ***********************************************************************************************/\cf3 \
+\'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 project_footer \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #999999\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 clear\cf3 : \cf7 both\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-family\cf3 : \cf6 'Lucida Grande'\cf3 , \cf6 'Lucida Sans Unicode'\cf3 , \cf7 Arial\cf3 , \cf7 sans-serif\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-size\cf3 : \cf5 9px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 margin\cf3 : \cf5 0 \cf7 auto\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 padding\cf3 : \cf5 30px 0 60px 0\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 text-align\cf3 : \cf7 center\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 width\cf3 : \cf5 670px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 comment_link a \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 comment_link a\cf3 :\cf4 hover \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 footer_title_type \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #000000\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-weight\cf3 : \cf7 bold\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 project_views \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #999999\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf2 /* Project Footer Links */\cf3 \
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 project_footer \cf3 .\cf4 permalink \cf3 \{ \cf4 display\cf3 : \cf7 none\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 project_footer \cf3 .\cf4 permalink a \cf3 \{ \cf4 color\cf3 : \cf6 #999999\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 project_footer \cf3 .\cf4 permalink a\cf3 :\cf4 hover \cf3 \{ \cf4 background\cf3 : \cf6 #ffff00\cf3 ; \cf4 color\cf3 : \cf6 #000000\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 project_footer \cf3 .\cf4 permalink a\cf3 :\cf4 active \cf3 \{ \cf4 color\cf3 : \cf6 #ffffff\cf3 ; \cf4 background\cf3 : \cf6 #000000\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 tags \cf3 \{ \cf4 color\cf3 : \cf6 #999999\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 tags a \cf3 \{ \cf4 color\cf3 : \cf6 #000000\cf3 ; \cf4 text-decoration\cf3 : \cf7 none\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 tags a\cf3 :\cf4 hover \cf3 \{ \cf4 background\cf3 : \cf6 #ffff00\cf3 ; \cf4 text-decoration\cf3 : \cf7 none\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 tags a\cf3 :\cf4 active \cf3 \{ \cf4 color\cf3 : \cf6 #ffffff\cf3 ; \cf4 background\cf3 : \cf6 #000000\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 tags a\cf3 :\cf4 visited \cf3 \{\'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 project_footer \cf3 .\cf4 editlink a \cf3 \{ \cf4 color\cf3 : \cf6 #0066ff\cf3 ; \cf4 font-style\cf3 : \cf7 italic\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 project_footer \cf3 .\cf4 editlink a\cf3 :\cf4 hover \cf3 \{ \cf4 background\cf3 : \cf6 #ffff00\cf3 ; \cf4 color\cf3 : \cf6 #000000\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 project_footer \cf3 .\cf4 editlink a\cf3 :\cf4 active \cf3 \{ \cf4 background\cf3 : \cf6 #000000\cf3 ; \cf4 color\cf3 : \cf6 #ffffff\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0\'a0.\cf4 project_bottom \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 clear\cf3 : \cf7 both\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 width\cf3 : \cf5 670px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0\'a0\
+\'a0 \'a0\'a0\
+\'a0 \'a0\'a0\
+\'a0 \'a0\'a0\
+\'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0\'a0\cf2 /* Content > Thumbnails\cf3 \
+\'a0 \'a0 \'a0 \'a0\'a0\cf2 ***************************************************************************************************/\cf3 \
+\'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 project_thumb \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 border\cf3 : \cf5 1px \cf7 solid transparent\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 float\cf3 : \cf7 left\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 margin\cf3 : \cf5 0 15px 30px 15px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 padding\cf3 : \cf5 10px 10px 20px 10px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 position\cf3 : \cf7 relative\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 width\cf3 : \cf5 220px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 -webkit-border-radius\cf3 : \cf5 2px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 -moz-border-radius\cf3 : \cf5 2px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 border-radius\cf3 : \cf5 2px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 project_thumb\cf3 :\cf4 hover \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 border\cf3 : \cf5 1px \cf7 solid \cf6 #cccccc\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 project_thumb\cf3 :\cf4 active \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 background\cf3 : \cf6 #ffffff\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 margin\cf3 : \cf5 1px 15px 20px 15px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 z-index\cf3 : \cf5 998\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 project_thumb \cf3 .\cf4 hover \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 background\cf3 : \cf6 #ffffff\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 cursor\cf3 : \cf7 pointer\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 text-decoration\cf3 : \cf7 none\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 project_thumb \cf3 .\cf4 nohover \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 text-decoration\cf3 : \cf7 none\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 project_thumb\cf3 .\cf4 active \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 border\cf3 : \cf5 2px \cf7 solid \cf6 #cccccc\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 margin\cf3 : \cf7 -1px \cf5 14px 29px 14px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 cardimgcrop \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 margin\cf3 : \cf5 0 0 16px 0\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 overflow\cf3 : \cf7 hidden\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 position\cf3 : \cf7 relative\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 loader_holder \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 display\cf3 : \cf7 none\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 position\cf3 : \cf7 absolute\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 top\cf3 : \cf5 18px\cf3 ; \cf4 left\cf3 : \cf5 18px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 z-index\cf3 : \cf5 3\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 thumb_title \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 thumb_title \cf3 .\cf4 text \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #000000\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-family\cf3 : \cf6 'Lucida Grande'\cf3 , \cf6 'Lucida Sans Unicode'\cf3 , \cf7 Helvetica\cf3 , \cf7 Arial\cf3 , \cf7 sans-serif\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-size\cf3 : \cf5 12px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-weight\cf3 : \cf7 bold\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0.\cf4 excerpt \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #666\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-family\cf3 : \cf6 'Lucida Grande'\cf3 , \cf6 'Lucida Sans Unicode'\cf3 , \cf7 Helvetica\cf3 , \cf7 Arial\cf3 , \cf7 sans-serif\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-size\cf3 : \cf5 10px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 margin\cf3 : \cf5 7px 0 10px 0\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 width\cf3 : \cf5 220px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 thumb_tag \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #bbbbbb\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-family\cf3 : \cf6 'Lucida Grande'\cf3 , \cf6 'Lucida Sans Unicode'\cf3 , \cf7 Helvetica\cf3 , \cf7 Arial\cf3 , \cf7 sans-serif\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-size\cf3 : \cf5 10px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 thumb_tag a \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #bbbbbb\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 text-decoration\cf3 : \cf7 underline\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 thumb_tag a\cf3 :\cf4 hover \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #666666\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 text-decoration\cf3 : \cf7 underline\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0\'a0\
+\'a0 \'a0\'a0\
+\'a0 \'a0\'a0\
+\'a0 \'a0\'a0\
+\'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0\'a0\cf2 /* Search results\cf3 \
+\'a0 \'a0 \'a0 \'a0\'a0\cf2 ***************************************************************************************************/\cf3 \
+\'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 #search_form \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 position\cf3 : \cf7 fixed\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 bottom\cf3 : \cf5 20px\cf3 ; \cf4 left\cf3 : \cf5 740px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 #search_form #search_term \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-size\cf3 : \cf5 11px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 width\cf3 : \cf5 188px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 #search_form_results \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 padding-bottom\cf3 : \cf5 90px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 search_header \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #000000\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 float\cf3 : \cf7 left\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-size\cf3 : \cf5 14px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-style\cf3 : \cf7 normal\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-weight\cf3 : \cf7 normal\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 margin\cf3 : \cf5 0\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 padding\cf3 : \cf5 4px 0\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 width\cf3 : \cf5 145px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 #search_term \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 background\cf3 : \cf6 #ffffff\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 border\cf3 : \cf5 1px \cf7 solid \cf6 #cccccc\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #000000\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 float\cf3 : \cf7 left\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-family\cf3 : \cf7 Arial\cf3 , \cf7 Helvetica\cf3 , \cf7 sans-serif\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-size\cf3 : \cf5 14px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 margin\cf3 : \cf5 0\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 padding\cf3 : \cf5 5px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 width\cf3 : \cf5 220px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 #search_results \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 float\cf3 : \cf7 left\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 result \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 clear\cf3 : \cf7 both\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-size\cf3 : \cf5 14px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 line-height\cf3 : \cf5 22px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 margin-bottom\cf3 : \cf5 60px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 search_thumb \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 float\cf3 : \cf7 left\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 margin\cf3 : \cf5 4px 25px 35px 0px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 search_thumb img \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 width\cf3 : \cf5 120px\cf3 ; \cf4 height\cf3 : \cf7 auto\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 search_text \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 width\cf3 : \cf5 500px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 margin-left\cf3 : \cf5 145px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 search_title a \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #000000\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-weight\cf3 : \cf7 bold\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 text-decoration\cf3 : \cf7 underline\cf3 ;\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 search_title a\cf3 :\cf4 hover \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 background\cf3 : \cf6 #ffff00\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #000000\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 text-decoration\cf3 : \cf7 none\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 search_title a\cf3 :\cf4 active \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 background\cf3 : \cf6 #000000\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #ffffff\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 text-decoration\cf3 : \cf7 none\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 search_tags \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #999999\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-size\cf3 : \cf5 11px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 search_tags a \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #999999\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 text-decoration\cf3 : \cf7 none\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 search_tags a\cf3 :\cf4 hover \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 background\cf3 : \cf7 none\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #000000\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 text-decoration\cf3 : \cf7 underline\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 search_tags a\cf3 :\cf4 active \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #666666\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0\'a0\
+\'a0 \'a0\'a0\
+\'a0 \'a0\'a0\
+\'a0 \'a0\'a0\
+\'a0 \'a0\'a0\
+\'a0 \'a0\'a0\cf2 /* Footer\cf3 \
+\'a0 \'a0\'a0\cf2 *******************************************************************************************************/\cf3 \
+\'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0\'a0\cf4 #page_footer \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #666666\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 position\cf3 : \cf7 relative\cf3 ;\
+\'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0\'a0\cf4 #page_footer br \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 display\cf3 : \cf7 none \cf8 !important\cf3 ;\
+\'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0\'a0.\cf4 pagination \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #999999\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-family\cf3 : \cf6 'Lucida Grande'\cf3 , \cf6 'Lucida Sans Unicode'\cf3 , \cf7 Arial\cf3 , \cf7 sans-serif\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-size\cf3 : \cf5 14px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 text-align\cf3 : \cf7 center\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 padding-bottom\cf3 : \cf5 90px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 pagination a \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #000000\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-size\cf3 : \cf5 14px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 text-decoration\cf3 : \cf7 none\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 pagination a\cf3 :\cf4 hover \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 background\cf3 : \cf7 transparent\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #000000\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 text-decoration\cf3 : \cf7 underline\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 pagination a\cf3 :\cf4 active \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #666666\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 pagination a\cf3 .\cf4 prev_page \cf3 \{ \cf4 margin-right\cf3 : \cf5 4px\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 pagination a\cf3 .\cf4 next_page \cf3 \{ \cf4 margin-left\cf3 : \cf5 4px\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 left_arrow\cf3 , .\cf4 right_arrow \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #000000\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-size\cf3 : \cf5 12px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 margin-top\cf3 : \cf5 3px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 width\cf3 : \cf5 20px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 left_arrow \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 margin-left\cf3 : \cf7 -12px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 text-align\cf3 : \cf7 right\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 right_arrow \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 margin-right\cf3 : \cf7 -12px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 text-align\cf3 : \cf7 left\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0\'a0.\cf4 cargo_link \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #cccccc\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-family\cf3 : \cf6 'Lucida Grande'\cf3 , \cf6 'Lucida Sans Unicode'\cf3 , \cf7 Helvetica\cf3 , \cf7 Arial\cf3 , \cf7 sans-serif\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-size\cf3 : \cf5 11px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 position\cf3 : \cf7 fixed\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 bottom\cf3 : \cf5 14px\cf3 ; \cf4 right\cf3 : \cf5 18px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 z-index\cf3 : \cf5 900\cf3 ;\
+\'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0\'a0.\cf4 cargo_link a \cf3 \{ \cf4 color\cf3 : \cf6 #cccccc\cf3 ; \cf4 text-decoration\cf3 : \cf7 underline\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0\'a0.\cf4 cargo_link a\cf3 :\cf4 hover \cf3 \{ \cf4 color\cf3 : \cf6 #666666\cf3 ; \cf4 text-decoration\cf3 : \cf7 underline\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0\'a0.\cf4 cargo_link a\cf3 :\cf4 active \cf3 \{ \cf4 color\cf3 : \cf6 #999999\cf3 ; \}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0\'a0.\cf4 bottompad \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 clear\cf3 : \cf7 both\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 position\cf3 : \cf7 relative\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 height\cf3 : \cf5 54px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 width\cf3 : \cf5 705px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0\'a0\}\
+\
+\
+\
+\
+\
+\'a0 \'a0\'a0\cf2 /* Video component\cf3 \
+\'a0 \'a0\'a0\cf2 *******************************************************************************************************/\cf3 \
+\'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0\'a0.\cf4 video_component \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 float\cf3 : \cf7 left\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 margin\cf3 : \cf5 0 15px 15px 0\cf3 ;\
+\'a0 \'a0 \'a0 \'a0\'a0\}\
+\
+\
+\
+\
+\
+\'a0 \'a0\'a0\cf2 /* Audio component\cf3 \
+\'a0 \'a0\'a0\cf2 *******************************************************************************************************/\cf3 \
+\'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0\'a0.\cf4 audio_component \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 color\cf3 : \cf6 #777777\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-family\cf3 : \cf6 'Droid Sans Mono'\cf3 , \cf7 Monaco\cf3 , \cf7 Monospace\cf3 , \cf7 Arial\cf3 , \cf7 san-serif\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 font-size\cf3 : \cf5 10px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 height\cf3 : \cf5 30px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 line-height\cf3 : \cf5 26px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 width\cf3 : \cf5 300px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 audio_component div \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 height\cf3 : \cf5 26px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 audio_component \cf3 .\cf4 border \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 border\cf3 : \cf5 2px \cf7 solid \cf6 #aaaaaa\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 opacity\cf3 : \cf5 0.5\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 -moz-border-radius\cf3 : \cf5 5px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 -webkit-border-radius\cf3 : \cf5 5px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 filter\cf3 : \cf7 alpha(opacity\cf3 =\cf5 50\cf7 )\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 -moz-opacity\cf3 : \cf5 0.5\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 -khtml-opacity\cf3 : \cf5 0.5\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 audio_component \cf3 .\cf4 vertical_border \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 background\cf3 : \cf6 #aaaaaa\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 opacity\cf3 : \cf5 0.50\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 filter\cf3 : \cf7 alpha(opacity\cf3 =\cf5 50\cf7 )\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 -moz-opacity\cf3 : \cf5 0.5\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 -khtml-opacity\cf3 : \cf5 0.5\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 audio_component \cf3 .\cf4 controls \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 top\cf3 : \cf5 2px\cf3 ; \cf4 left\cf3 : \cf5 2px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 audio_component \cf3 .\cf4 play_pause \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 background\cf3 : \cf7 url(\cf6 "/_gfx/playpause.png"\cf7 )\cf3 ;\'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 audio_component \cf3 .\cf4 spectrum \cf3 .\cf4 spectrum_bar \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 background\cf3 : \cf6 #666666\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 audio_component \cf3 .\cf4 loading \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 background\cf3 : \cf6 #bbbbbb\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 opacity\cf3 : \cf5 0.25\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 filter\cf3 : \cf7 alpha(opacity\cf3 =\cf5 25\cf7 )\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 -moz-opacity\cf3 : \cf5 0.25\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 -khtml-opacity\cf3 : \cf5 0.25\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 audio_component \cf3 .\cf4 progress \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 background\cf3 : \cf6 #bbbbbb\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 border-right\cf3 : \cf5 1px \cf7 dotted \cf6 #333333\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 opacity\cf3 : \cf5 0.25\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 filter\cf3 : \cf7 alpha(opacity\cf3 =\cf5 25\cf7 )\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 -moz-opacity\cf3 : \cf5 0.25\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 -khtml-opacity\cf3 : \cf5 0.25\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0.\cf4 audio_component \cf3 .\cf4 volume_slide\cf3 .\cf4 hover \cf3 \{\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 background\cf3 : \cf6 #bbbbbb\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 opacity\cf3 : \cf5 0.3\cf3 ;\
+\'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 filter\cf3 : \cf7 alpha(opacity\cf3 =\cf5 30\cf7 )\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 -moz-opacity\cf3 : \cf5 0.3\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf4 -khtml-opacity\cf3 : \cf5 0.3\cf3 ;\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\}\
+\
+\
+\
+\
+\
+\cf2 /* Other\cf3 \
+\cf2 ***********************************************************************************************************/\cf3 \
+\
+\'a0 \'a0\'a0.\cf4 toolset \cf3 \{\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\cf2 /* Admin and following icons \'97 only seen by members */\cf3 \
+\'a0 \'a0 \'a0 \'a0\'a0\cf4 position\cf3 : \cf7 fixed\cf3 ;\
+\'a0 \'a0 \'a0 \'a0\'a0\cf4 top\cf3 : \cf5 10px\cf3 ; \cf4 right\cf3 : \cf5 10px\cf3 ;\
+\'a0 \'a0 \'a0 \'a0\'a0\cf4 z-index\cf3 : \cf5 9999\cf3 ;\
+\'a0 \'a0\'a0\}\
+\'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0\'a0\
+\'a0 \'a0 \'a0 \'a0\'a0\
+\cf2 /* In-browser code editing made "almost bearable" by CodeMirror: http://marijn.haverbeke.nl/codemirror\cf3 \
+\cf2 ***********************************************************************************************************/\cf4  }
